@@ -1,0 +1,22 @@
+
+
+<ul class="contact-list">
+
+    <hr>
+
+  <li class="p-name">
+    {%- if site.email -%}
+    <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+    {%- endif -%}
+
+    {%- if site.linkedin_username -%}
+    <li><center><a target="_blank"href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
+      <svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username"> {{ site.author | escape }}</span></a></center>
+      <center>Copyright &#169; 2020 | {{ site.description | escape }}</center>
+    </li>
+    {%- endif -%}
+    
+    
+
+</ul>
+
