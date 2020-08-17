@@ -1,8 +1,40 @@
 ---
-layout: default
+layout: post #default
 title:  "Test Post"
-date:   2020-08-13 22:11:23 -0400
+# author: Tom P
+date:   2020-08-13
 categories: test
+comments: true
+
+# this will override the default behavior of displaying the first paragraph
+excerpt:
+         <p>Add a Custom Excerpt to Your Post.
+         Find out how!</p>
+
+tags: [ crypto, math ]
+
+
 ---
 
+
 Test post is here...
+
+```py
+
+    def foo():
+        if test:
+        # do something
+
+```
+[Check out this study](https://www.researchgate.net/publication/216485703_Transport_Layer_Security_TLS--A_Network_Security_Protocol_for_E-commerce){:target="_blank"}
+
+
+{% if post.tags.size > 0 %}
+  Tag{% if post.tags.size > 1 %}s{% endif %}:
+  {{ post.tags | sort | join: ", " }}
+{% endif %}
+
+
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}
